@@ -1,5 +1,5 @@
 # app.py
-
+import os
 from flask import Flask, request, jsonify
 from supabase import create_client, Client
 import torch
@@ -9,8 +9,8 @@ import requests
 from io import BytesIO
 
 # Replace these with your Supabase project details
-SUPABASE_URL = 'https://pvsdmkbiuoyriivhkfwq.supabase.co'
-SUPABASE_API_KEY = 'your_supabase_api_key_here'
+SUPABASE_URL = os.getenv('SUPABASE_URL')
+SUPABASE_API_KEY = os.getenv('SUPABASE_API_KEY')
 
 # Initialize the Supabase client
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_API_KEY)
