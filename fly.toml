@@ -3,7 +3,7 @@ app = "image-post-embedding"  # Ensure this matches your Fly app name
 [env]
   SUPABASE_URL = "https://bpdgwtzndipaybatzcix.supabase.co"  # Ensure this is correct
   SUPABASE_API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJwZGd3dHpuZGlwYXliYXR6Y2l4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzEyNzkxNDgsImV4cCI6MjA0Njg1NTE0OH0.Jan2VtasYMgsVXiAhbRdlyDC4ol_Ra9mB_eJ3uqUiKE"  # Consider storing this securely
-  DATABASE_URL = "postgresql://postgres:[LastLong$890xaXaxaXAxa]@db.mkzzskwyhpguzfchyavx.supabase.co:5432/postgres"  # Replace with your actual connection string
+  DATABASE_URL = "postgresql://postgres:[pDOd80Nlx0LDu9fZ]@db.bpdgwtzndipaybatzcix.supabase.co:5432/postgres"  # Replace with your actual connection string
 [build]
   docker = { dockerfile = "Dockerfile" }  # Ensure you have a Dockerfile if specified
 
