@@ -6,7 +6,7 @@ app = "image-post-embedding"
 
 
 [build]
-  # No need to specify a dockerfile if you're using buildpacks
+  docker = { dockerfile = "Dockerfile" }
 
 [machine]
   size = "shared-cpu-1x"
