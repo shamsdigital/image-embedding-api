@@ -1,4 +1,3 @@
-# app.py
 import os
 from flask import Flask, request, jsonify
 from supabase import create_client, Client
@@ -8,7 +7,7 @@ from PIL import Image
 import requests
 from io import BytesIO
 
-# Replace these with your Supabase project details
+# Load Supabase credentials from environment variables
 SUPABASE_URL = os.getenv('SUPABASE_URL')
 SUPABASE_API_KEY = os.getenv('SUPABASE_API_KEY')
 
@@ -28,6 +27,7 @@ def get_image_embedding(image_url):
     """
     try:
         response = requests.get(image_url)
+        response.raise_for_status()  # Ensure we raise an error for bad responses
         image = Image.open(BytesIO(response.content)).convert("RGB")
     except Exception as e:
         print(f"Error downloading or processing image: {e}")
@@ -91,7 +91,5 @@ def insert_image():
     return store_image_data(image_url, user_id)
 
 if __name__ == '__main__':
-    import os
-    port = int(os.environ.get("PORT", 5000))  # Use PORT environment variable provided by Railway
+    port = int(os.environ.get("PORT", 5000))  # Use PORT environment variable provided by Fly.io or Railway
     app.run(debug=False, host='0.0.0.0', port=port)
-
