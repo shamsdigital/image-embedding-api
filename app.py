@@ -61,7 +61,7 @@ def store_image_data(image_url, user_id):
         "user_id": user_id  # Store the user_id
     }
 
-    # Insert the data into the 'images' table
+    # Insert the data into the 'images' table in Supabase
     try:
         response = supabase.table("images").insert(data).execute()
 
