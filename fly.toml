@@ -1,0 +1,15 @@
+app = "image-post-embedding"
+
+[build]
+  docker = { dockerfile = "Dockerfile" }  # Specify if using Docker
+
+[machine]
+  size = "shared-cpu-1x"  # Adjust based on your needs
+
+[[services]]
+  http_checks = []
+  internal_port = 5000
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = "80"
