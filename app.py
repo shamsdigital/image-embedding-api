@@ -10,6 +10,7 @@ from io import BytesIO
 # Load Supabase credentials from environment variables
 SUPABASE_URL = os.getenv('SUPABASE_URL')
 SUPABASE_API_KEY = os.getenv('SUPABASE_API_KEY')
+DATABASE_URL = os.getenv('DATABASE_URL')
 
 # Initialize the Supabase client
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_API_KEY)
