@@ -56,9 +56,10 @@ def store_image_data(image_url, user_id):
 
     # Prepare the data to insert
     data = {
+        "user_id": user_id  # Store the user_id
         "image_url": image_url,
         "embedding": embedding,  # Store the embedding directly as a list
-        "user_id": user_id  # Store the user_id
+
     }
 
     # Insert the data into the 'images' table in Supabase
