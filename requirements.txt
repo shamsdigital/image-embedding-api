@@ -5,3 +5,4 @@ torchvision
 transformers
 Pillow
 requests
+gunicorn  # Added gunicorn for production serving.
